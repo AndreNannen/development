@@ -1,0 +1,17 @@
+{# data from api.github.com/users/andrenannen #}
+<img src="{{ avatar_url }}" class="thumbnail" />
+
+<h1> {{ name }}</h1>
+<h2> {{ login }}</h2>
+
+<hr />
+
+{#  List that shows a foreach syntax, array, loops trough the values from the array, details is the array key.
+    This is actually a sub-array for in the profileAction in the TestController #}
+<ul>
+    {%  for detail in details %}
+        <li> {{ detail }}</li>
+    {% endfor %}
+</ul>
+
+<hr />

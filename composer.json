@@ -28,11 +28,15 @@
         "symfony/templating": "^3.2",
         "paragonie/random_compat": "^2.0",
         "symfony/framework-bundle": "^3.2",
-        "friendsofsymfony/user-bundle": "~2.0@dev"
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "swiftmailer/swiftmailer": "^5.4",
+        "symfony/console": "^3.2",
+        "symfony/phpunit-bridge": "^3.2",
+        "mockery/mockery": "^0.9.7",
+        "twbs/bootstrap": "^3.3"
     },
     "require-dev": {
-        "sensio/generator-bundle": "^3.0",
-        "symfony/phpunit-bridge": "^3.0"
+        "sensio/generator-bundle": "^3.0"
     },
     "scripts": {
         "symfony-scripts": [
