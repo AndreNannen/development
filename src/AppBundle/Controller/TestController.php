@@ -27,7 +27,7 @@ class TestController extends Controller
     /**
      * @Route("/pf", name="profile")
      */
-
+// profileAction, has got an Array that loops data from api.github.com/users/andrenannen that brings it to test/gitprofile.html.twig.
     public function profileAction(Request $request)
     {
         return $this->render('test/profile.html.twig', [
@@ -38,9 +38,14 @@ class TestController extends Controller
                 'company' => 'Webwijs B.V.',
                 'location' => 'The Netherlands, Heerenveen',
                 'joined_on'  => 'Joined on 2014-09-09',
-                // profileAction, has got an Array that loops data from api.github.com/users/andrenannen that brings it to test/gitprofile.html.twig.
+                ],
+                'social_data' => [
+                    "Public Repos" => 0,
+                    "Followers" => 999,
+                    "Following" => 0,
+                    ]
 
-            ]
+
         ]);
     }
 
