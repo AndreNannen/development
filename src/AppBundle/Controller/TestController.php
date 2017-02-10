@@ -21,32 +21,70 @@ class TestController extends Controller
      */
     public function testAction(Request $request)
     {
-        return $this->render('test/index.html.twig');
-    }
-
-    /**
-     * @Route("/pf", name="profile")
-     */
-// profileAction, has got an Array that loops data from api.github.com/users/andrenannen that brings it to test/gitprofile.html.twig.
-    public function profileAction(Request $request)
-    {
-        return $this->render('test/profile.html.twig', [
+        return $this->render('test/index.html.twig', [
             'avatar_url' => 'https://avatars.githubusercontent.com/u/8707163?v=3',
             'name' => "André Nannen",
-            'login' => 'AndreNannen',
+            'login' => 'andrenannen',
             'details' => [
                 'company' => 'Webwijs B.V.',
                 'location' => 'The Netherlands, Heerenveen',
                 'joined_on'  => 'Joined on 2014-09-09',
+            ],
+            'social_data' => [
+                "Public Repos" => 12,
+                "Followers" => 999,
+                "Following" => 1,
+            ],
+            'repo_count' => 100,
+            'most_stars' => 88,
+            'repos' => [
+                [
+                    'name' => 'some repository',
+                    'url' => 'https://webwijs.nu',
+                    'stargazers_count' => 46,
+                    'description' => 'learn symfony 3'
                 ],
-                'social_data' => [
-                    "Public Repos" => 0,
-                    "Followers" => 999,
-                    "Following" => 0,
-                    ]
-
+                [
+                    'name' => 'Awesomeness',
+                    'url' => 'https://nos.nl',
+                    'stargazers_count' =>77,
+                    'description' => 'News!'
+                ],
+                [
+                    'name' => 'Dope news',
+                    'url' => 'https://nu.nl',
+                    'stargazers_count' =>77,
+                    'description' => 'News!'
+                ],
+                        ]
 
         ]);
+
     }
 
+  //  /**
+    // * @Route("/pf", name="profile")
+    // */
+
+// profileAction, has got an Array that loops data from api.github.com/users/andrenannen that brings it to test/gitprofile.html.twig.
+  //  public function profileAction(Request $request)
+  //  {
+//            'avatar_url' => 'https://avatars.githubusercontent.com/u/8707163?v=3',
+      //      'name' => "André Nannen",
+       //     'login' => 'AndreNannen',
+       //     'details' => [
+          //      'company' => 'Webwijs B.V.',
+          //      'location' => 'The Netherlands, Heerenveen',
+//                ],
+            //    'socialdata' => [
+            //        "Public Repos" => 0,
+            //        "Followers" => 999,
+              //      "Following" => 0,
+              //      ]
+
+
+     //   ]);
+   // }
+
 }
+

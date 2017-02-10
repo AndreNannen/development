@@ -2,5 +2,13 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-Test
+    {# data from api.github.com/users/andrenannen #}
+    <div class="col-sm-3">
+
+   {% include ':test:profile.html.twig' %}
+    </div>
+
+    <div class="col-sm-9">
+    {% include':test:repos.html.twig' %}
+    </div>
 {% endblock body %}
